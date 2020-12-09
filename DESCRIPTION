@@ -1,0 +1,20 @@
+Package: rt.validation
+Title: Validation of Time-varying Reproduction Number Estimates
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Sam",
+           family = "Abbott",
+           role = c("aut", "cre"),
+           email = "sam.abbott@lshtm.ac.uk",
+           comment = c(ORCID = "0000-0001-8057-8037")),
+    person("Sebastian", "Funk",
+            email = "sebastian.funk@lshtm.ac.uk",
+            role = c("aut")))
+Description: Validation of time-varying reproduction number estimates.
+License: MIT + file LICENSE
+Suggests: 
+    testthat
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
