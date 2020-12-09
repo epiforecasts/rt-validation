@@ -17,7 +17,8 @@ Imports:
     EpiNow2 (>= 1.3.2.3),
     scoringutils (>= 0.1.4)
 Suggests: 
-    testthat
+    testthat,
+    spelling
 Remotes:
     epiforecasts/EpiNow2
     epiforecasts/scoringutils
@@ -25,3 +26,4 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Language: en-GB
