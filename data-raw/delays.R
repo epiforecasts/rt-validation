@@ -24,5 +24,4 @@ delays <- delays[, c("mean_sd_list", "sd_sd_list") := NULL]
 # set up id and add as data
 delays <- delays[, id := 1:.N]
 setcolorder(delays, c("id", "length"))
-
-usethis::use_data(synthetic_delays, overwrite = TRUE)
+usethis::use_data(delays, overwrite = TRUE)
