@@ -38,4 +38,7 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 .Rproj.user
+
+#temporary files
+docs
 docs
