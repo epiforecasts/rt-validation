@@ -16,10 +16,6 @@ gt <- gt[, .(as.data.table(.SD), mean_sd = unlist(mean_sd_list)), by = .N]
 gt <- gt[, .(as.data.table(.SD), sd_sd = unlist(sd_sd_list)), by = .N]
 gt <- gt[, c("mean_sd_list", "sd_sd_list") := NULL]
 
-# add no delay scenario
-gt <- rbindlist(list(data.table(length = "none"), gt),
-                     use.names = TRUE, fill = TRUE)
-
 # add max delay allowed (based on mean and 3 * sd)
 gt <- gt[, max := mean + 3 * sd]
 
