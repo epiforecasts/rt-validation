@@ -27,5 +27,5 @@ incubation <- rbindlist(list(data.table(length = "none"), incubation),
 # set up id and add as data
 incubation <- incubation[, id := 1:.N]
 setcolorder(incubation, c("id", "length"))
-incubation_scenarios <- incubation
-usethis::use_data(incubation_scenarios, overwrite = TRUE)
+incubation_period_scenarios <- incubation
+usethis::use_data(incubation_period_scenarios, overwrite = TRUE)

@@ -30,5 +30,5 @@ delays <- delays[, max := mean + 3 * sd]
 # set up id and add as data
 delays <- delays[, id := 1:.N]
 setcolorder(delays, c("id", "length"))
-delay_scenarios <- delays
-usethis::use_data(delay_scenarios, overwrite = TRUE)
+reporting_delay_scenarios <- delays
+usethis::use_data(reporting_delay_scenarios, overwrite = TRUE)
