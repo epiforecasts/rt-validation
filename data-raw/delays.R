@@ -4,7 +4,7 @@ library(EpiNow2)
 # define delay scenarios
 delays <- data.table(
   length = c("short", "medium", "long"),
-  mean = c(3, 9, 21),
+  mean = c(3, 6, 18),
   sd = list(c(1, 3, 9))
 )
 delays <- delays[, .(sd = unlist(sd)), by = c("length", "mean")]
