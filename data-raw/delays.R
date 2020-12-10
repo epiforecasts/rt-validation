@@ -20,6 +20,12 @@ delays <- delays[, .(as.data.table(.SD), mean_sd = unlist(mean_sd_list)), by = .
 delays <- delays[, .(as.data.table(.SD), sd_sd = unlist(sd_sd_list)), by = .N]
 delays <- delays[, c("mean_sd_list", "sd_sd_list") := NULL]
 
+# add no delay scenario
+delays <- rbindlist(list(data.table(length = "none"), delays),
+                    use.names = TRUE, fill = TRUE)
+
+# add max delay allowed (based on mean and 3 * sd)
+delays <- delays [, max := mean + 3 * sd]
 
 # set up id and add as data
 delays <- delays[, id := 1:.N]
