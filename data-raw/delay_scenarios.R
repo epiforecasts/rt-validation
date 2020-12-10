@@ -25,9 +25,10 @@ delays <- rbindlist(list(data.table(length = "none"), delays),
                     use.names = TRUE, fill = TRUE)
 
 # add max delay allowed (based on mean and 3 * sd)
-delays <- delays [, max := mean + 3 * sd]
+delays <- delays[, max := mean + 3 * sd]
 
 # set up id and add as data
 delays <- delays[, id := 1:.N]
 setcolorder(delays, c("id", "length"))
-usethis::use_data(delays, overwrite = TRUE)
+delay_scenarios <- delays
+usethis::use_data(delay_scenarios, overwrite = TRUE)
